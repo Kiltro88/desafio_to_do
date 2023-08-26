@@ -76,6 +76,16 @@ function actualizarEstado(id) {
   } else {
     tareaGuardada.estado = 0;
   }
+
+  const tarea = document.getElementById(id);
+  if (tareaGuardada.estado === 1) {
+    tarea.style.fontWeight = "bold";
+    tarea.style.color = "green";
+  } else {
+    tarea.style.fontWeight = "normal";
+    tarea.style.color = "black";
+  }
+  
   actualizarTotales();
 }
 
